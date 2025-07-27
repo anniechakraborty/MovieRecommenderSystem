@@ -20,9 +20,12 @@ def main():
     selected_movie_name = st.selectbox('Select a movie to get some recommendations', movies_df['title'])
 
     if st.button('Recommend'):
-        recommended_titles = recommend(selected_movie_name, movies_df, similarity_matrix)
-        for title in recommended_titles:
-            st.write(title)
+        recommended_titles, posters = recommend(selected_movie_name, movies_df, similarity_matrix)
+        columns = st.columns(spec=len(recommended_titles), gap='small', vertical_alignment='center', border=False)
+        for col, title, img in zip(columns, recommended_titles, posters):
+            with col:
+                st.write(title)
+                st.image(img)
 
 if __name__ == '__main__':
     main()
