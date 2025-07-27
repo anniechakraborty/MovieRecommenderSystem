@@ -63,6 +63,13 @@ movie_recommender/
 ## 📚 Data Source
 This project uses the TMDB 5000 Movie Dataset from Kaggle.
 
+## 📝 TODOs
+- ~~Add movie posters or trailers via TMDB API~~
+- Improve similarity scoring using TF-IDF or BERT
+- Improve the UI design to offer better movie selection
+- Add search/filter by genre or year
+- Deploy on Streamlit Cloud or Hugging Face Spaces
+
 ## 🛡 License
 This project is open-source under the MIT License.
 
